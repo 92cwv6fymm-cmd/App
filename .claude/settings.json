@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:conseil-national.medecin.fr)"
+      "WebFetch(domain:conseil-national.medecin.fr)",
+      "WebFetch(domain:www.conseil-national.medecin.fr)"
     ]
   }
 }
