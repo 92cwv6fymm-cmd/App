@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Cours – Mise à jour des recommandations SAOS 2026 : bien définir pour bien traiter</title>
+<style>
+  @page { size: A4; }
+  :root{ --ink:#1d2a33; --teal:#0e8a84; --teal-dark:#0a5f5b; --teal-light:#e6f4f3; --violet:#7a2a7a; --violet-light:#f5ebf5; --blue:#2c4f8a; --blue-light:#e9eef8; --amber:#8a5a0e; --amber-light:#fbf3e3; --grey:#f3f4f6; --line:#cfd6db; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color:var(--ink); font-size:10.6pt; line-height:1.45; }
+  h1,h2,h3,h4{ font-family: Georgia, "Times New Roman", serif; color:var(--teal-dark); margin:0 0 .4em 0; line-height:1.2; }
+  h1{ font-size:26pt; }
+  h2{ font-size:17pt; border-bottom:2.5px solid var(--teal); padding-bottom:.2em; margin-top:0; page-break-after:avoid; }
+  h3{ font-size:13pt; color:var(--violet); margin-top:1.2em; page-break-after:avoid; }
+  h4{ font-size:11pt; color:var(--blue); margin-top:1em; page-break-after:avoid; }
+  p{ margin:.35em 0 .6em; text-align:justify; }
+  ul,ol{ margin:.3em 0 .7em 1.2em; padding:0; }
+  li{ margin:.18em 0; }
+  .part{ page-break-before:always; }
+  .nobreak{ page-break-inside:avoid; }
+  .kicker{ text-transform:uppercase; letter-spacing:.12em; font-size:8.5pt; color:var(--teal); font-weight:bold; margin-bottom:.2em; }
+  /* cover */
+  .cover{ min-height:255mm; display:flex; flex-direction:column; justify-content:space-between; }
+  .cover .band{ background:linear-gradient(135deg,var(--teal-dark),var(--teal)); color:#fff; padding:26mm 14mm 18mm; border-radius:6px; }
+  .cover .band h1{ color:#fff; font-size:28pt; margin:0 0 .3em; }
+  .cover .band .sub{ font-size:14pt; opacity:.95; }
+  .cover .meta{ margin-top:10mm; }
+  .cover .meta table{ width:100%; border-collapse:collapse; font-size:10.5pt; }
+  .cover .meta td{ padding:5px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  .cover .meta td:first-child{ width:34%; color:var(--teal-dark); font-weight:bold; }
+  .warn{ background:var(--amber-light); border-left:5px solid var(--amber); padding:8px 12px; margin:.8em 0; font-size:9.8pt; }
+  /* boxes */
+  .reco{ background:var(--blue-light); border:1px solid #b9c7e6; border-left:6px solid var(--blue); padding:9px 13px; margin:.9em 0; page-break-inside:avoid; }
+  .reco .lbl{ font-weight:bold; color:var(--blue); font-size:9pt; text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px; }
+  .reco p{ margin:.25em 0; }
+  .oral{ background:var(--violet-light); border-left:6px solid var(--violet); padding:9px 13px; margin:.9em 0; page-break-inside:avoid; }
+  .oral .lbl{ font-weight:bold; color:var(--violet); font-size:9pt; text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px; }
+  .key{ background:var(--teal-light); border:1px solid #a9d8d4; border-radius:6px; padding:10px 14px; margin:.9em 0; page-break-inside:avoid; }
+  .key .lbl{ font-weight:bold; color:var(--teal-dark); font-size:9pt; text-transform:uppercase; letter-spacing:.08em; margin-bottom:3px; }
+  .def{ background:var(--grey); border-left:6px solid #6b7a86; padding:8px 13px; margin:.8em 0; page-break-inside:avoid; }
+  .def .lbl{ font-weight:bold; color:#4a5862; font-size:9pt; text-transform:uppercase; letter-spacing:.08em; }
+  /* tables */
+  table.t{ width:100%; border-collapse:collapse; margin:.6em 0 1em; font-size:9.6pt; page-break-inside:avoid; }
+  table.t th{ background:var(--teal-dark); color:#fff; text-align:left; padding:6px 8px; font-weight:bold; }
+  table.t td{ padding:5px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  table.t tr:nth-child(even) td{ background:#f7f9fa; }
+  table.t td.ok{ color:#0a6d33; font-weight:bold; }
+  table.t td.no{ color:#9b1c1c; font-weight:bold; }
+  table.t td.mid{ color:var(--amber); font-weight:bold; }
+  .cols{ display:flex; gap:14px; }
+  .cols > div{ flex:1; }
+  .cat{ border:1.5px solid var(--blue); border-radius:8px; padding:8px 10px; page-break-inside:avoid; }
+  .cat h5{ margin:0 0 4px; color:var(--blue); font-size:10pt; text-align:center; }
+  .cat .sub{ font-style:italic; text-align:center; font-size:9pt; color:#4a5862; margin-bottom:5px; }
+  .cat ul{ margin-left:1.1em; font-size:9.6pt; }
+  .crit{ display:flex; gap:10px; align-items:stretch; margin:.6em 0; }
+  .crit .box{ flex:1; border:1.5px solid var(--line); border-radius:6px; padding:8px 10px; background:#fff; }
+  .crit .box .letter{ display:inline-block; background:var(--ink); color:#fff; font-weight:bold; border-radius:4px; padding:1px 7px; margin-right:6px; }
+  .crit .plus{ align-self:center; font-size:20pt; font-weight:bold; color:var(--teal); }
+  .toc ol{ margin-left:1.3em; }
+  .toc li{ margin:.3em 0; }
+  .small{ font-size:9pt; color:#4a5862; }
+  .qcm{ margin:.6em 0 .9em; page-break-inside:avoid; }
+  .qcm .q{ font-weight:bold; }
+  .qcm ol{ list-style-type:upper-alpha; margin-left:1.6em; }
+  .corr{ background:var(--grey); padding:7px 11px; border-radius:5px; margin:.4em 0 .8em; page-break-inside:avoid; font-size:9.8pt; }
+  .timeline td:first-child{ white-space:nowrap; font-family:Menlo,Consolas,monospace; font-size:9pt; color:var(--teal-dark); }
+  .footnote{ font-size:8.8pt; color:#4a5862; border-top:1px solid var(--line); padding-top:6px; margin-top:1.2em; }
+  .chip{ display:inline-block; background:var(--teal-light); color:var(--teal-dark); border-radius:12px; padding:1px 9px; font-size:8.8pt; font-weight:bold; margin-right:4px; }
+</style>
+</head>
+<body>
+
+<!-- ======================= COUVERTURE ======================= -->
+<section class="cover">
+  <div>
+    <div class="band">
+      <div class="kicker" style="color:#d6f2ef">Cours de médecine du sommeil – Pneumologie</div>
+      <h1>Mise à jour des recommandations sur la prise en charge du SAOS</h1>
+      <div class="sub">« Bien définir pour bien traiter » – Définitions, symptômes, IAH pathologique, sévérité, examens et dépistage</div>
+    </div>
+    <div class="meta">
+      <table>
+        <tr><td>Source pédagogique</td><td>Jeudi de la SPLF du 5 novembre 2026 (vidéo de 37 min 36 s) et épisode associé du podcast « Quoi de neuf Docteur ? » (1 min 02 s), Société de Pneumologie de Langue Française.</td></tr>
+        <tr><td>Intervenants</td><td><b>Pr Wojciech Trzepizur</b>, professeur de pneumologie, coordinateur du centre de référence des narcolepsies et hypersomnies rares, CHU d'Angers.<br><b>Dr Sandrine Launois</b>, pneumologue spécialisée en médecine du sommeil, responsable du Groupe Sommeil de la SPLF (co-coordinatrice des recommandations, absente lors de l'enregistrement).</td></tr>
+        <tr><td>Cadre du travail</td><td>Recommandations coordonnées par la SPLF et la SFRMS (Société Française de Recherche et Médecine du Sommeil), avec des sociétés savantes partenaires (cardiologie, ORL…). Environ quarante contributeurs. Mise à jour des Recommandations pour la Pratique Clinique (RPC) de 2010.</td></tr>
+        <tr><td>Public cible</td><td>Pneumologues, somnologues, internes, médecins généralistes, cardiologues, anesthésistes, et tout professionnel impliqué dans le diagnostic du syndrome d'apnées-hypopnées obstructives du sommeil (SAHOS).</td></tr>
+        <tr><td>Durée estimée</td><td>Lecture : 60 à 75 minutes. Auto-évaluation : 20 minutes.</td></tr>
+        <tr><td>Document rédigé le</td><td>8 novembre 2026</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="warn">
+    <b>Avertissement important.</b> Chaque diapositive de la présentation porte la mention « Le contenu de cette diapositive concerne des recommandations en cours, non définitives ». Les propositions présentées ici sont donc soumises à discussion et peuvent être modifiées avant publication officielle. Ce document est une <b>synthèse pédagogique rédigée à partir de la vidéo et de l'audio</b> ; il ne constitue pas le texte officiel des recommandations et ne remplace pas la publication à venir de la SPLF/SFRMS. Les propos oraux ont été reformulés ; ils n'engagent que la compréhension du rédacteur.
+  </div>
+</section>
+
+<!-- ======================= SOMMAIRE ======================= -->
+<section class="part toc">
+  <h2>Sommaire</h2>
+  <ol>
+    <li>Objectifs pédagogiques et mode d'emploi</li>
+    <li>Contexte : pourquoi une mise à jour des RPC 2010 ?</li>
+    <li>Partie 1 – Définitions des événements respiratoires : apnée, hypopnée, ERIM</li>
+    <li>Partie 2 – Les symptômes : une nouvelle classification en quatre catégories</li>
+    <li>Partie 3 – IAH élevé isolé, SAHOS et la nouvelle notion d'AROS</li>
+    <li>Partie 4 – Quel seuil d'IAH pathologique ? Le rôle de l'âge</li>
+    <li>Partie 5 – Sévérité : abandon de la classification léger / modéré / sévère</li>
+    <li>Partie 6 – Quel examen : polygraphie ventilatoire ou polysomnographie ?</li>
+    <li>Partie 7 – Le dépistage : concepts, outils et population générale</li>
+    <li>Partie 8 – SAOS et risque cardiovasculaire : relecture critique de la littérature</li>
+    <li>Partie 9 – Dépistage des AROS dans les situations à risque (10 situations cliniques)</li>
+    <li>Partie 10 – Synthèse : « Bien définir pour mieux traiter » et impact sur la pratique</li>
+    <li>Tableau récapitulatif des recommandations proposées</li>
+    <li>Auto-évaluation : 15 QCM corrigés et 3 cas cliniques</li>
+    <li>Glossaire</li>
+    <li>Références citées dans la présentation</li>
+    <li>Annexes : chronologie de la vidéo, contenu du podcast, suites annoncées</li>
+  </ol>
+
+  <h2 style="margin-top:1.6em">1. Objectifs pédagogiques</h2>
+  <p>À l'issue de ce cours, l'apprenant doit être capable de :</p>
+  <ol>
+    <li>Énoncer les définitions actualisées de l'apnée et de l'hypopnée, et expliquer pourquoi les ERIM sont intégrés dans la définition de l'hypopnée.</li>
+    <li>Classer les symptômes du SAHOS en quatre catégories et identifier celles qui comptent pour le diagnostic.</li>
+    <li>Distinguer SAHOS, AROS (anomalies respiratoires obstructives du sommeil) et AROS à haut risque, et en donner les critères (A, B, C, D).</li>
+    <li>Justifier les seuils d'IAH pathologique proposés (≥ 5/h de 18 à 65 ans ; ≥ 15/h à partir de 65 ans).</li>
+    <li>Expliquer pourquoi la classification de sévérité fondée sur l'IAH est abandonnée au profit d'une évaluation multidimensionnelle.</li>
+    <li>Choisir entre polygraphie ventilatoire et polysomnographie d'emblée selon la situation clinique.</li>
+    <li>Définir le dépistage au sens de l'OMS, connaître les limites des questionnaires (STOP-Bang, Berlin, NoSAS) et la position sur le dépistage en population générale.</li>
+    <li>Analyser de façon critique l'association SAOS – risque cardiovasculaire (études observationnelles, essais randomisés, biais de publication, « healthy adherer effect », biomarqueur PWAD).</li>
+    <li>Appliquer les propositions de dépistage ciblé dans dix situations : obésité, HTA, diabète de type 2, coronaropathie, insuffisance cardiaque, AVC, fibrillation atriale, BPCO, période périopératoire, grossesse.</li>
+  </ol>
+
+  <h3>Mode d'emploi des encadrés</h3>
+  <div class="reco"><div class="lbl">Recommandation proposée</div><p>Texte des propositions telles que présentées sur les diapositives (reformulées ; recommandations en cours, non définitives).</p></div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div><p>Éléments d'explication, de justification ou de nuance apportés oralement par le Pr Trzepizur et absents des diapositives.</p></div>
+  <div class="key"><div class="lbl">À retenir</div><p>Messages clés pour la pratique et pour l'examen.</p></div>
+  <div class="def"><div class="lbl">Définition</div><p>Rappels de définitions et de vocabulaire.</p></div>
+</section>
+
+<!-- ======================= CONTEXTE ======================= -->
+<section class="part">
+  <h2>2. Contexte : pourquoi une mise à jour des recommandations de 2010 ?</h2>
+  <p>Les dernières recommandations françaises pour la pratique clinique (RPC) sur le syndrome d'apnées-hypopnées obstructives du sommeil de l'adulte datent de 2010. Depuis, la littérature a profondément évolué, en particulier sur trois points : la valeur réelle de l'index d'apnées-hypopnées (IAH) comme marqueur de sévérité et de pronostic, la place des symptômes dans le diagnostic, et l'impact de la pression positive continue (PPC) sur le pronostic cardiovasculaire.</p>
+  <p>Un groupe de travail d'environ quarante experts, coordonné par le Pr Wojciech Trzepizur et le Dr Sandrine Launois, a été constitué sous l'égide de la SPLF et de la SFRMS, avec la participation d'autres sociétés savantes (cardiologie, ORL). Le Jeudi de la SPLF du 5 novembre 2026 constitue une <b>première partie</b>, consacrée aux définitions, à la sévérité, aux examens et au dépistage. Une seconde partie, consacrée au traitement et au suivi, est annoncée.</p>
+
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>L'orateur présente cette séance comme « presque un teaser » : les recommandations complètes seront présentées au Congrès du Sommeil (Lyon, 25–27 novembre 2026) et au 31<sup>e</sup> Congrès de Pneumologie de Langue Française (Marseille, 29–31 janvier 2027). À chaque présentation, l'avis de l'auditoire est recueilli pour rediscuter et adapter le texte avant la publication officielle. Il rappelle que les conflits d'intérêts des deux coordinateurs ont été déclarés en début de séance.</p>
+  </div>
+
+  <h3>Le fil conducteur : « Bien définir pour bien traiter »</h3>
+  <p>Le titre résume la philosophie du travail. Les décisions thérapeutiques (qui traiter, avec quoi) dépendent d'abord de la qualité du diagnostic. Or, depuis 2010, la pratique s'est souvent résumée à un chiffre d'IAH. Les recommandations en cours replacent le <b>symptôme et son retentissement</b> au centre du raisonnement, tant pour poser le diagnostic que pour évaluer la sévérité et décider d'un traitement. Dans le podcast, le Pr Trzepizur résume : les symptômes sont « le mot-clé de ces recommandations », à la fois pour évaluer la sévérité de la maladie et pour identifier les patients à qui proposer un traitement spécifique.</p>
+
+  <div class="key"><div class="lbl">À retenir</div>
+    <ul>
+      <li>Mise à jour des RPC 2010, portée par la SPLF et la SFRMS, environ 40 experts, partenaires cardiologues et ORL.</li>
+      <li>Statut : recommandations <b>en cours, non définitives</b>, soumises à discussion.</li>
+      <li>Trois axes de changement : définitions simplifiées, place centrale des symptômes, nouveau chapitre « dépistage » fondé sur le bénéfice clinique attendu.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= PARTIE 1 ======================= -->
+<section class="part">
+  <h2>3. Partie 1 – Définitions des événements respiratoires</h2>
+
+  <h3>3.1 L'apnée : retour à la définition de 2010</h3>
+  <table class="t">
+    <tr><th style="width:28%">Source</th><th>Définition de l'apnée</th></tr>
+    <tr><td>RPC 2010</td><td>Arrêt du débit aérien naso-buccal pendant au moins 10 secondes.</td></tr>
+    <tr><td>Consensus SAHCS 2024 (reprenant l'AASM)</td><td>Diminution du débit aérien naso-buccal de plus de 90 % par rapport à la référence pré-événement, pendant au moins 10 secondes.</td></tr>
+    <tr><td><b>Proposition 2026</b></td><td><b>Arrêt du débit aérien naso-buccal pendant au moins 10 secondes</b> (retour à la formulation de 2010).</td></tr>
+  </table>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>La définition américaine (« diminution de plus de 90 % ») a été jugée peu pertinente aujourd'hui : elle repose sur un codage des apnées réalisé avec des <b>thermistances</b>, capteurs peu fiables pour quantifier le débit et de moins en moins utilisés au profit des <b>capteurs de pression nasale</b>. Le groupe préfère donc conserver la définition simple de 2010.</p>
+  </div>
+  <div class="reco"><div class="lbl">Recommandation proposée</div><p>L'apnée est caractérisée par un arrêt du débit aérien naso-buccal pendant au moins 10 secondes.</p></div>
+
+  <h3>3.2 L'hypopnée et les ERIM : le passé</h3>
+  <div class="def"><div class="lbl">Définitions historiques</div>
+    <p><b>Hypopnée (consensus SAHCS 2024, reprenant l'AASM 2012)</b> : diminution ≥ 30 % du signal de débit aérien naso-buccal pendant au moins 10 secondes, associée à une désaturation ≥ 3 % ou à un micro-éveil EEG.</p>
+    <p><b>ERIM (RPC 2010)</b> : événement respiratoire inducteur de micro-éveil. Présence d'un plateau inspiratoire sur le signal de pression nasale (limitation de débit), suivi d'un micro-éveil EEG. Dès 2010, il était proposé de les intégrer aux hypopnées lors du codage visuel des tracés.</p>
+  </div>
+  <h4>Le constat du groupe de travail</h4>
+  <ul>
+    <li>La baisse ≥ 30 % du débit est <b>difficile à mesurer objectivement</b> : le signal de pression nasale n'est ni calibré ni linéaire ; le seuil de 30 % est arbitraire et apprécié de façon subjective.</li>
+    <li>ERIM et hypopnées traduisent une <b>même physiopathologie</b> : augmentation progressive de la résistance des voies aériennes supérieures (VAS) pouvant induire un micro-éveil qui fragmente le sommeil.</li>
+    <li>Avec la définition AASM 2012 des hypopnées, les ERIM sont rares, les profils « ERIM prédominants » sont exceptionnels et leur impact sur l'index d'anomalies respiratoires est faible.</li>
+  </ul>
+
+  <h3>3.3 L'hypopnée : la proposition 2026</h3>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <p>L'hypopnée est caractérisée :</p>
+    <ul>
+      <li>soit par une <b>diminution significative du débit</b> associée à une désaturation de 3 % ou à un micro-éveil ;</li>
+      <li>soit par une <b>séquence de cycles respiratoires caractérisés par un plateau du signal de débit inspiratoire</b> entraînant un micro-éveil (l'ancien ERIM) ;</li>
+      <li>d'une durée comprise entre <b>10 et 120 secondes</b>.</li>
+    </ul>
+    <p><b>Remarque :</b> seules les hypopnées <b>désaturantes</b> doivent être prises en compte dans une polygraphie ventilatoire (PV).</p>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Le mot « significative » remplace volontairement un pourcentage chiffré que l'on ne sait pas mesurer de façon fiable. La borne haute de 120 secondes a été fixée de façon reconnue comme arbitraire. En polygraphie ventilatoire simple, sans EEG, il est impossible de détecter un micro-éveil : seules les hypopnées désaturantes peuvent y être comptabilisées, alors que la polysomnographie (PSG) permet de quantifier aussi les hypopnées « éveillantes ».</p>
+  </div>
+  <div class="key"><div class="lbl">À retenir</div>
+    <ul>
+      <li>Apnée : arrêt du débit ≥ 10 s (définition 2010 conservée).</li>
+      <li>Hypopnée : diminution significative du débit + désaturation 3 % ou micro-éveil, <b>ou</b> plateau inspiratoire + micro-éveil ; durée 10 à 120 s. Le terme ERIM disparaît en tant qu'entité séparée.</li>
+      <li>Conséquence pratique : une PV sous-estime l'IAH chez les patients dont les événements sont surtout éveillants (sujets jeunes, sans surpoids, femmes) – voir Partie 6.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ======================= PARTIE 2 ======================= -->
+<section class="part">
+  <h2>4. Partie 2 – Les symptômes : quatre catégories</h2>
+  <p>Savoir quels symptômes sont réellement imputables aux événements obstructifs est, selon l'orateur, « plus compliqué qu'il n'y paraît ». Le groupe propose un classement en quatre catégories, les trois premières étant les plus spécifiques.</p>
+  <div class="cols">
+    <div class="cat"><h5>Catégorie 1</h5><div class="sub">Indices d'obstruction des VAS</div><ul><li>Ronflements</li><li>Apnées rapportées (pauses respiratoires constatées)</li><li>Suffocations nocturnes</li></ul></div>
+    <div class="cat"><h5>Catégorie 2</h5><div class="sub">Indices d'altération du sommeil</div><ul><li>Sommeil non réparateur</li><li>Somnolence diurne excessive</li><li>Fatigue reliée au sommeil</li><li>Insomnie</li></ul></div>
+    <div class="cat"><h5>Catégorie 3</h5><div class="sub">Indices mixtes</div><ul><li>Céphalées matinales</li><li>Nycturie</li><li>Sueurs nocturnes</li></ul></div>
+  </div>
+  <div style="display:flex;justify-content:center;margin-top:10px"><div class="cat" style="width:46%;border-color:#6b7a86"><h5 style="color:#4a5862">Catégorie 4</h5><div class="sub">Indices moins spécifiques</div><ul><li>Fatigue</li><li>Altération de l'humeur</li><li>Troubles cognitifs</li><li>Baisse de la libido…</li></ul></div></div>
+
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>La catégorie 3 regroupe des signes qui concernent moins directement le sommeil mais sont fréquemment associés aux apnées. La catégorie 4 rassemble des symptômes fréquents et non pathognomoniques, pouvant relever de très nombreuses autres maladies ; ils ne suffisent pas au diagnostic.</p>
+  </div>
+  <div class="reco"><div class="lbl">Deux exigences cliniques complémentaires</div>
+    <ul>
+      <li><b>Évaluer le retentissement</b> des symptômes sur la vie du patient.</li>
+      <li><b>Rechercher d'autres causes</b> pouvant « mieux » expliquer les symptômes : c'est le travail clinique irremplaçable du médecin.</li>
+    </ul>
+  </div>
+  <div class="key"><div class="lbl">À retenir</div>
+    <p>Pour le diagnostic de SAHOS (voir Partie 3), il faut des symptômes d'<b>au moins deux des trois premières catégories</b>, non mieux expliqués par une autre cause, et entraînant une détresse ou un handicap cliniquement significatif.</p>
+  </div>
+</section>
+
+<!-- ======================= PARTIE 3 ======================= -->
+<section class="part">
+  <h2>5. Partie 3 – IAH élevé isolé, SAHOS et la notion d'AROS</h2>
+
+  <h3>5.1 Le problème de l'IAH élevé sans symptôme</h3>
+  <ul>
+    <li>Un IAH élevé est <b>très fréquent en population générale</b> (voir Partie 7 : dans la cohorte HypnoLaus, plus de 80 % des hommes de plus de 40 ans ont un IAH ≥ 5/h).</li>
+    <li>L'IAH n'est pas systématiquement associé à une symptomatologie spécifique et <b>corrèle mal avec la sévérité des symptômes</b>.</li>
+    <li>L'IAH <b>n'est pas un biomarqueur pronostique indépendant</b>, ni pour le pronostic global ni pour le pronostic cardiovasculaire (voir Partie 8).</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <ul>
+      <li>Il est recommandé de <b>ne pas retenir le diagnostic de SAHOS en l'absence de symptômes</b>.</li>
+      <li>Il est proposé de définir sous le terme « <b>anomalies respiratoires obstructives du sommeil</b> » ou « <b>AROS</b> » un IAH pathologique sans symptôme.</li>
+      <li>Il est proposé de rechercher des AROS dans des situations cliniques spécifiques où leur pathogénicité est la mieux établie (chapitre « dépistage »). On parlera alors d'« <b>AROS à haut risque</b> ».</li>
+    </ul>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>« Tout syndrome nécessite des symptômes. » Le terme AROS comble une lacune de la langue française : la littérature anglophone distingue <i>OSA</i> (obstructive sleep apnea, un IAH élevé isolé) et <i>OSAS</i> (le syndrome, avec symptômes), mais ce dernier terme y est souvent mal employé. AROS est la traduction d'<i>OSA</i> ; SAHOS reste celle d'<i>OSAS</i>. Cette terminologie permet de « coller » à la littérature et de décrire plus précisément ce que présentent les patients.</p>
+  </div>
+
+  <h3>5.2 Définition du SAHOS : critères A + B + C</h3>
+  <div class="crit">
+    <div class="box"><span class="letter">A</span><b>Anomalie de la respiration pendant le sommeil</b><br><span class="small">IAH : index d'événements respiratoires majoritairement obstructifs (apnées obstructives ou mixtes, hypopnées, efforts respiratoires inducteurs de micro-éveils) par heure de sommeil ou d'enregistrement :<br>• ≥ 5/h de 18 à 65 ans<br>• ≥ 15/h à partir de 65 ans</span></div>
+    <div class="plus">+</div>
+    <div class="box"><span class="letter">B</span><b>Symptômes d'au moins 2 des 3 catégories</b><br><span class="small">Cat. 1 obstruction des VAS ; Cat. 2 altération du sommeil ; Cat. 3 altérations mixtes.<br><span style="color:#9b1c1c">* Non mieux expliqué(s) par d'autres causes.</span></span></div>
+    <div class="plus">+</div>
+    <div class="box"><span class="letter">C</span><b>Détresse ou handicap cliniquement significatif</b><br><span class="small">Retentissement des symptômes évalué cliniquement.</span></div>
+  </div>
+
+  <h3>5.3 Définition des AROS à haut risque : critères A + D</h3>
+  <div class="crit">
+    <div class="box"><span class="letter">A</span><b>IAH pathologique</b><br><span class="small">Mêmes seuils que ci-dessus (≥ 5/h de 18 à 65 ans ; ≥ 15/h à partir de 65 ans), sans symptôme suffisant pour le critère B.</span></div>
+    <div class="plus">+</div>
+    <div class="box"><span class="letter">D</span><b>Risque pour la santé</b><br><span class="small">• HTA résistante et/ou mal contrôlée / profil « non-dipper »<br>• Autres situations cliniques avec suspicion élevée d'une causalité entre les AROS et la comorbidité</span></div>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Le critère D retient uniquement les comorbidités où les événements obstructifs pourraient impacter le pronostic « de façon plus certaine » et surtout où la PPC pourrait avoir un impact réel. Comme on le verra en Partie 9, la liste de ces situations est, à l'état actuel des preuves, très courte.</p>
+  </div>
+
+  <table class="t">
+    <tr><th>Situation</th><th>Terminologie proposée</th><th>Équivalent anglophone</th></tr>
+    <tr><td>IAH pathologique <b>avec</b> symptômes (A + B + C)</td><td><b>SAHOS</b></td><td>OSAS</td></tr>
+    <tr><td>IAH pathologique <b>sans</b> symptômes</td><td><b>AROS</b></td><td>OSA</td></tr>
+    <tr><td>AROS + comorbidité spécifique (A + D)</td><td><b>AROS à haut risque</b></td><td>–</td></tr>
+  </table>
+</section>
+
+<!-- ======================= PARTIE 4 ======================= -->
+<section class="part">
+  <h2>6. Partie 4 – Quel seuil d'IAH pathologique ? Le rôle de l'âge</h2>
+  <h3>6.1 Les données épidémiologiques</h3>
+  <ul>
+    <li><b>Cohortes en population générale (SHHS, Young, Arch Intern Med 2002)</b> : la prévalence d'un IAH ≥ 15/h augmente progressivement avec l'âge jusqu'à environ 65 ans, puis atteint un plateau.</li>
+    <li><b>Méta-analyse chez des sujets sains (Boulos et al., 2019)</b> : chez des sujets sans aucune plainte de sommeil, dormant bien et en forme dans la journée, l'IAH moyen reste en général inférieur à 15/h jusqu'à 65 ans, puis dépasse ce seuil dans la quasi-totalité des études portant sur des sujets plus âgés. Une méta-analyse retrouve un IAH moyen d'environ 15/h chez des sujets sains de 65 à 80 ans.</li>
+    <li>Chez les sujets âgés, l'association entre IAH et symptômes est moindre, et le bénéfice clinique à IAH égal est moindre.</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <p>Il est proposé de considérer comme pathologique un IAH :</p>
+    <ul><li><b>≥ 5/heure de 18 à 65 ans</b> ;</li><li><b>≥ 15/heure à partir de 65 ans</b>.</li></ul>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Le seuil de 5/h, en vigueur depuis plusieurs décennies, est conservé chez l'adulte de moins de 65 ans parce que des essais randomisés montrent un bénéfice symptomatique de la PPC même dans les SAHOS dits « légers ». Un parallèle est fait avec la pédiatrie (seuil à 1/h) : on passerait à 5/h à l'âge adulte et à 15/h chez le sujet âgé. Le relèvement à 15/h après 65 ans est jugé « raisonnable » au vu des données ci-dessus.</p>
+  </div>
+  <div class="key"><div class="lbl">À retenir</div>
+    <table class="t" style="margin:0">
+      <tr><th>Âge</th><th>Seuil d'IAH pathologique</th><th>Argument principal</th></tr>
+      <tr><td>Enfant</td><td>≥ 1/h</td><td>Référence pédiatrique (rappel)</td></tr>
+      <tr><td>18 à 65 ans</td><td>≥ 5/h</td><td>Bénéfice symptomatique de la PPC démontré même pour un IAH bas</td></tr>
+      <tr><td>≥ 65 ans</td><td>≥ 15/h</td><td>IAH « physiologique » ~15/h chez les sujets sains âgés ; association symptômes–IAH et bénéfice moindres</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ======================= PARTIE 5 ======================= -->
+<section class="part">
+  <h2>7. Partie 5 – Sévérité : abandon de la classification léger / modéré / sévère</h2>
+  <h3>7.1 Le constat</h3>
+  <ul>
+    <li><b>En 2010</b>, la sévérité reposait sur l'IAH <i>ou</i> sur l'importance de la somnolence (le plus élevé des deux étant à considérer). En pratique, c'est la graduation léger / modéré / sévère fondée sur l'IAH seul qui est « restée gravée » chez la plupart des praticiens.</li>
+    <li>Or il n'existe <b>pas d'association</b> entre l'IAH et : la sévérité des symptômes ; le pronostic des patients ; l'impact de la PPC (sur les symptômes comme sur le pronostic).</li>
+    <li>Données nouvelles de la cohorte des Pays de la Loire (Trzepizur et al., ERS 2026) : le nuage de points IAH versus variation du score d'Epworth sous PPC montre que l'IAH initial <b>ne prédit pas</b> l'amélioration de la somnolence sous traitement.</li>
+    <li>L'IAH n'a pas d'intérêt pour le choix thérapeutique (chapitre « traitement » à venir : le choix PPC versus orthèse ne sera plus fondé sur l'IAH).</li>
+    <li>De nombreuses maladies se passent d'un biomarqueur unique pour coter leur gravité.</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <ul>
+      <li>Il est proposé d'<b>abandonner la classification en « léger », « modéré » et « sévère » basée sur l'IAH</b>.</li>
+      <li>Aucun critère ne permettant de déterminer de façon consensuelle la sévérité du SAHOS, il est recommandé d'évaluer le <b>retentissement de la maladie par une approche multidimensionnelle</b> tenant compte de la clinique, des biomarqueurs et du terrain.</li>
+    </ul>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Évaluer la sévérité devient une <b>compétence clinique</b> et non la lecture d'un chiffre : « l'IAH seul ne permet pas d'évaluer la sévérité du SAHOS de façon scientifique ». Dans le podcast, c'est présenté comme l'une des deux évolutions majeures avec la redéfinition des hypopnées.</p>
+  </div>
+  <div class="key"><div class="lbl">À retenir</div>
+    <p>Ne plus écrire « SAHOS sévère » sur la seule base d'un IAH ≥ 30/h. Décrire le retentissement : symptômes et leur impact (catégories 1 à 3, échelles), biomarqueurs (désaturations, charge hypoxique, PWAD…), terrain (comorbidités, âge, profession à risque).</p>
+  </div>
+</section>
+
+<!-- ======================= PARTIE 6 ======================= -->
+<section class="part">
+  <h2>8. Partie 6 – Quel examen : polygraphie ventilatoire ou polysomnographie ?</h2>
+  <p>« Pas beaucoup de changements » : la polygraphie ventilatoire (PV) reste l'examen de première intention en cas de suspicion clinique de SAHOS. Le groupe a surtout voulu identifier les situations où la polysomnographie (PSG) doit être proposée d'emblée.</p>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <p>Il est recommandé de réaliser une <b>PSG d'emblée, sans PV préalable</b>, dans les situations suivantes :</p>
+    <ul>
+      <li>en cas de <b>trouble non respiratoire du sommeil associé</b> : insomnie, syndrome des jambes sans repos et/ou suspicion de mouvements périodiques des jambes (en particulier en cas de prise d'inhibiteurs sélectifs de la recapture de la sérotonine) ;</li>
+      <li>chez les <b>sujets à risque d'hypopnées non désaturantes</b>, en particulier les patients jeunes sans surpoids.</li>
+    </ul>
+    <p>Il est recommandé de réaliser une <b>PV d'emblée</b> en cas de suspicion clinique de SAHOS chez le patient ne relevant pas d'une PSG en première intention.</p>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Le risque d'hypopnées non désaturantes (donc invisibles en PV, voir Partie 1) concerne surtout les sujets jeunes, sans surpoids, et « peut-être plus les femmes ».</p>
+  </div>
+  <div class="key"><div class="lbl">À retenir</div>
+    <p>PSG d'emblée si : comorbidité non respiratoire du sommeil (insomnie, SJSR/MPJ, ISRS) ou profil « hypopnées éveillantes » (jeune, mince, femme). Sinon PV.</p>
+  </div>
+</section>
+
+<!-- ======================= PARTIE 7 ======================= -->
+<section class="part">
+  <h2>9. Partie 7 – Le dépistage : concepts, outils, population générale</h2>
+  <p>Ce chapitre est <b>nouveau</b> par rapport aux RPC 2010. L'orateur le présente comme le plus long et le plus argumenté scientifiquement, parce qu'il « refixe un cadre qui a beaucoup bougé depuis 2010 ».</p>
+
+  <h3>9.1 Qu'est-ce que dépister ? La définition de l'OMS</h3>
+  <div class="def"><div class="lbl">Définition (OMS)</div>
+    <p>Le dépistage consiste à identifier de manière présomptive, à l'aide de tests appliqués de façon systématique et standardisée, les sujets atteints d'une maladie ou d'une anomalie passée jusque-là inaperçue. Les tests doivent permettre de faire le partage entre les personnes <b>apparemment en bonne santé</b> mais probablement atteintes et celles qui en sont probablement exemptes. La sous-population identifiée fait ensuite l'objet d'<b>investigations à visée diagnostique</b>, puis d'une <b>intervention</b> (traitement, mesure préventive ou information jugée importante).</p>
+  </div>
+  <p>Trois conséquences pour le SAHOS :</p>
+  <ol>
+    <li>Le dépistage s'adresse par définition à des sujets <b>asymptomatiques</b> (ou peu symptomatiques) : il s'agit donc d'identifier des patients à haut risque d'<b>AROS</b>, pas de SAHOS.</li>
+    <li>La PV et la PSG <b>ne sont pas des outils de dépistage mais de diagnostic</b> (confirmation).</li>
+    <li>Le dépistage n'a de sens que si une intervention efficace existe : la preuve d'un <b>impact pronostique de la PPC</b> dans la sous-population dépistée est la question centrale du chapitre.</li>
+  </ol>
+
+  <h3>9.2 Prévalence des AROS en population générale</h3>
+  <p>Cohorte HypnoLaus (Lausanne ; Heinzer et al., Lancet Respiratory Medicine 2015), la cohorte épidémiologique la plus récente et proche de la population française, enregistrement par PSG indépendamment de tout symptôme, sujets de plus de 40 ans :</p>
+  <table class="t">
+    <tr><th>Seuil</th><th>Hommes</th><th>Femmes</th></tr>
+    <tr><td>IAH ≥ 5/h</td><td>83,8 %</td><td>60,8 %</td></tr>
+    <tr><td>IAH ≥ 15/h</td><td>49,7 %</td><td>23,4 %</td></tr>
+  </table>
+  <p>La prévalence de chaque classe augmente avec l'âge (≥ 60 ans versus &lt; 60 ans). Conclusion : les AROS sont « extrêmement fréquents » ; un IAH ≥ 15/h concerne la moitié des hommes de plus de 40 ans.</p>
+
+  <h3>9.3 Les outils de dépistage</h3>
+  <ul>
+    <li>Questionnaires documentés par une littérature riche : <b>STOP-Bang, Berlin, NoSAS</b>…</li>
+    <li>Ils ont été validés pour identifier les patients à plus haut risque d'<b>IAH élevé (AROS)</b>, <b>non pour détecter un SAHOS</b> : ils tiennent peu compte des symptômes et de leur retentissement (certains en incluent, pas tous).</li>
+    <li>Ils sont donc peu utiles pour le diagnostic de SAHOS, mais potentiellement utiles pour rechercher un AROS à haut risque dans des sous-populations ciblées.</li>
+  </ul>
+
+  <h3>9.4 Dépistage en population générale</h3>
+  <ul><li>AROS très fréquents.</li><li>Pas d'outil validé pour le dépistage en population générale.</li><li>Pas d'étude dédiée.</li></ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <p>Il n'est <b>pas recommandé</b> de réaliser un dépistage du SAHOS en population générale, que ce soit par des questionnaires standardisés ou par des examens complémentaires.</p>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Cette position est cohérente avec ce qui existe déjà au niveau national et international. La vraie question est celle des <b>sous-populations</b> avec comorbidités : faut-il y dépister de façon plus systématique ?</p>
+  </div>
+
+  <h3>9.5 Méthode d'analyse pour les situations à risque</h3>
+  <p>Objectif : certaines comorbidités ou situations justifient-elles à elles seules un dépistage des AROS (et la mise en route d'une PPC), indépendamment de tout symptôme ?</p>
+  <ul>
+    <li><b>Comorbidités et situations étudiées</b> (les plus fréquentes, et celles où l'impact de la PPC est le mieux documenté) : métaboliques, cardiovasculaires, respiratoires ; situations à risque : périopératoire et grossesse.</li>
+    <li><b>Analyse de la littérature</b> pour chaque sous-population : (1) association indépendante entre AROS et pronostic (mortalité, morbidité incidente) ; (2) impact de la PPC : essais randomisés si disponibles, études observationnelles à défaut.</li>
+  </ul>
+</section>
+
+<!-- ======================= PARTIE 8 ======================= -->
+<section class="part">
+  <h2>10. Partie 8 – SAOS et risque cardiovasculaire : relecture critique de la littérature</h2>
+  <p>Cette partie fournit la justification scientifique des propositions de la Partie 9. L'orateur annonce une situation « qui a déjà fait couler beaucoup d'encre et continuera d'en faire couler ».</p>
+
+  <h3>10.1 Les études historiques (époque des RPC 2010)</h3>
+  <table class="t">
+    <tr><th>Étude</th><th>Résultat</th><th>Limite soulignée</th></tr>
+    <tr><td>Redline, AJRCCM 2010 (SHHS, n = 5 422, suivi 8,7 ans)</td><td>Risque d'AVC multiplié par 2,86 (IC 95 % 1,1–7,4) chez les <b>hommes</b> avec IAH &gt; 19/h</td><td>Sous-groupe : hommes seulement, IAH élevé</td></tr>
+    <tr><td>Gottlieb, Circulation 2010 (SHHS, n = 4 442, suivi 8,7 ans)</td><td>+ 68 % de coronaropathie chez les <b>hommes de moins de 70 ans</b> avec IAH ≥ 30/h</td><td>Sous-groupe, analyses post hoc</td></tr>
+  </table>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Dès 2010, l'association n'était pas retrouvée dans la population entière mais seulement dans des sous-groupes (hommes, IAH très élevé, âge &lt; 70 ans) : il s'agissait déjà d'analyses en sous-groupe, pas de résultats en population générale.</p>
+  </div>
+
+  <h3>10.2 Le basculement de 2014 : Kendzerska et al., PLoS Medicine</h3>
+  <p>Grande cohorte clinique canadienne (patients adressés pour suspicion d'apnées du sommeil, suivi d'environ 60 mois). En analyse brute, le risque d'événement augmente avec la classe d'IAH ; <b>après ajustement</b> sur les facteurs de risque cardiovasculaire connus depuis des décennies (IMC, âge, sexe, tabac, HTA, diabète, infarctus, AVC, insuffisance ventriculaire gauche), les courbes se superposent : « il ne se passe strictement plus rien ». L'IAH n'est pas un prédicteur indépendant du pronostic cardiovasculaire. D'autres biomarqueurs sont en développement mais non validés.</p>
+
+  <h3>10.3 Le biais de publication</h3>
+  <p>Auteurs et éditeurs préfèrent les résultats positifs. Trois études récentes, conçues pour évaluer <i>d'autres</i> marqueurs, contiennent toutes une analyse de l'IAH isolé (« OSA », c'est-à-dire l'AROS) et, dans ces grandes cohortes à long suivi et ajustements robustes, l'IAH n'est <b>jamais</b> associé de façon indépendante au pronostic :</p>
+  <ul>
+    <li><b>Trzepizur et al., AJRCCM 2022</b> (cohorte des Pays de la Loire) : étude de la charge hypoxique (<i>hypoxic burden</i>) ; log IAH non significatif après ajustement (HR ~1,12, non significatif).</li>
+    <li><b>Solelhac et al., AJRCCM 2023</b> (HypnoLaus) : étude du PWAD (voir 10.6) ; courbes OSA+ versus OSA– quasi superposées.</li>
+    <li><b>Lechat et al., Journal of Sleep Research 2022</b> (SHHS) : étude de l'insomnie et de la comorbidité insomnie–SAOS (COMISA) ; dans le modèle ajusté, l'OSA isolé n'est pas associé aux événements cardiovasculaires incidents (HR ~0,96).</li>
+  </ul>
+
+  <h3>10.4 Essais randomisés versus études observationnelles</h3>
+  <ul>
+    <li><b>Essais randomisés</b> : trois essais négatifs comparant PPC et soins courants en prévention cardiovasculaire secondaire. Méta-analyse sur données individuelles (Sánchez-de-la-Torre et al., JAMA) : HR global 1,01 (IC 95 % 0,87–1,17) pour les événements cardiovasculaires majeurs (MACCE). Les courbes PPC / sans PPC sont superposées sur 60 mois.</li>
+    <li><b>Étude observationnelle française</b> (Pépin et al., CHEST 2023) : les patients utilisant la PPC ont une meilleure survie que ceux qui l'ont arrêtée (mauvaise tolérance ou refus).</li>
+  </ul>
+  <p>Comment réconcilier ces résultats ? Par un biais majeur des études observationnelles, identifié récemment dans le domaine : le <i>healthy adherer effect</i>.</p>
+
+  <h3>10.5 Le « healthy adherer effect »</h3>
+  <div class="def"><div class="lbl">Définition</div>
+    <p><b>Healthy adherer effect</b> (sans bonne traduction française, « effet de l'observant en bonne santé ») : les patients adhérents à un traitement, quel qu'il soit, ont globalement un comportement plus favorable à la santé, ce qui améliore leur pronostic indépendamment de l'effet du traitement lui-même.</p>
+  </div>
+  <ul>
+    <li><b>Curtis et al., Medical Care 2011</b> (Women's Health Initiative) : plus de 13 000 femmes ménopausées, <b>groupe placebo</b> d'un essai randomisé d'hormonothérapie, plus de 7 ans de suivi. Après ajustement très complet (âge, éducation, tabac, alcool, alimentation, IMC, activité physique, assurance, dépistages, comorbidités, traitements…), les femmes adhérentes au placebo ont une mortalité réduite d'environ 35 % (HR ajusté ~0,64 ; réduction aussi des fractures de hanche et des décès coronariens).</li>
+    <li><b>Simpson et al., BMJ 2006</b> : méta-analyse montrant, dans le champ cardiovasculaire, un effet « healthy adherer » de l'ordre de 30 à 40 % de réduction du risque.</li>
+    <li><b>Application à la PPC (2024)</b> : Launois et al., Thorax 2024 (cohorte des Pays de la Loire, n ≈ 1 783) et Lettieri et al., JCSM 2024 (États-Unis) : plus l'usage de la PPC est faible (0–2 h, 2–4 h, 4–6 h, 6–7 h, ≥ 7 h/nuit), plus l'adhésion aux traitements cardiovasculaires est faible ; corrélation forte (R² ≈ 0,58) entre pourcentage de nuits d'utilisation de la PPC et observance médicamenteuse.</li>
+  </ul>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>« Le simple fait d'être adhérent à un traitement, quel qu'il soit, même au placebo, c'est une diminution de 35 % » du risque de décès. C'est probablement ce biais qui réconcilie observationnel et randomisé, mais « plutôt dans le sens d'une absence d'impact réel de la PPC sur le pronostic cardiovasculaire » dans les populations étudiées (Marin, Lancet 2005 ; Pépin, CHEST 2023 ; Sánchez-de-la-Torre, JAMA).</p>
+  </div>
+
+  <h3>10.6 Un biomarqueur infra-clinique : le PWAD (Pulse Wave Amplitude Drops)</h3>
+  <div class="def"><div class="lbl">Définition</div>
+    <p><b>PWAD</b> : chutes de l'amplitude de l'onde de pouls mesurée par la photopléthysmographie de l'oxymètre. Chaque événement obstructif entraîne une décharge adrénergique et une vasoconstriction périphérique, visible sous forme d'une baisse d'amplitude du signal. L'index de PWAD reflète la <b>réactivité vasculaire</b> du patient. Outil développé par l'équipe de Lausanne (Solelhac et al., AJRCCM 2023).</p>
+  </div>
+  <ul>
+    <li><b>Index PWAD élevé</b> : le patient vasoconstricte à chaque événement, ses vaisseaux sont encore « réactifs », probablement sains.</li>
+    <li><b>Index PWAD bas</b> : le patient enchaîne les apnées sans réponse vasculaire, ce qui suggère des vaisseaux déjà altérés, ayant perdu leur variabilité.</li>
+    <li><b>Pronostic (HypnoLaus)</b> : les patients OSA+ avec index PWAD bas ont nettement plus d'événements cardiovasculaires ; les trois autres groupes (OSA+/PWAD élevé, OSA–/PWAD bas, OSA–/PWAD élevé) ont un pronostic similaire.</li>
+    <li><b>Bénéfice de la PPC (cohorte des Pays de la Loire)</b> : chez les patients à PWAD élevé (≥ 47,4), les adhérents à la PPC ont moins d'événements que les non-adhérents (HR 0,74 ; IC 95 % 0,55–0,98 ; p = 0,036). Chez les patients à PWAD bas, aucune différence (HR 0,91 ; 0,72–1,15 ; p = 0,43).</li>
+  </ul>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Résultat « peut-être contre-intuitif » : c'est chez les patients les <b>moins sévères sur le plan vasculaire</b> que la PPC pourrait avoir un impact. Si la PPC a un effet cardiovasculaire (« c'est encore du conditionnel »), c'est probablement à un stade précoce ; une fois les vaisseaux abîmés, « on arrive peut-être trop tard ».</p>
+  </div>
+
+  <h3>10.7 Données observationnelles : Gervès-Pinquié et al., AJRCCM 2022</h3>
+  <p>Cohorte IRSR Pays de la Loire, 5 138 patients avec SAHOS confirmé et PPC prescrite. Critère : MACE (infarctus, AVC, insuffisance cardiaque, revascularisation, mortalité toute cause). Après ajustement (âge, sexe, Epworth, alcool, tabac, antécédents cardiovasculaires, HTA, diabète, dépression, traitements cardiovasculaires et leur observance, type d'enregistrement, IAH), les patients les plus adhérents ont le meilleur pronostic, surtout au-delà de 6 h/nuit. Les analyses en sous-groupes montrent que le bénéfice apparent est observé : (1) chez les patients <b>symptomatiques</b> ; (2) exclusivement chez les patients <b>sans antécédent cardiovasculaire</b> (prévention primaire).</p>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Le premier point ramène « à un problème qui n'existe pas » : les patients symptomatiques doivent être traités de toute façon. Le second point est celui qui doit faire évoluer les pratiques.</p>
+  </div>
+
+  <h3>10.8 Synthèse : prévention primaire versus secondaire</h3>
+  <table class="t">
+    <tr><th>Type de donnée</th><th>Prévention primaire (sans antécédent CV)</th><th>Prévention secondaire (post AVC / IDM / FA…)</th></tr>
+    <tr><td>Biomarqueurs (PWAD)</td><td class="mid">+/–</td><td class="no">–</td></tr>
+    <tr><td>Données observationnelles</td><td class="mid">+/–</td><td class="no">–</td></tr>
+    <tr><td>Études randomisées</td><td class="mid">?</td><td class="no">–</td></tr>
+  </table>
+  <div class="reco"><div class="lbl">Conclusion du groupe</div>
+    <p>La présence d'une comorbidité cardiovasculaire <b>ne devrait pas justifier</b> : (1) un dépistage systématique des AROS ; (2) un argument en faveur de la mise en place d'une PPC.</p>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Tous les signaux sont négatifs en prévention secondaire ; un doute persiste en prévention primaire. Il n'y a donc pas d'argument pour « aller chercher » les apnées chez les sujets en post-événement cardiovasculaire. La case des <b>critères de remboursement</b> permettant de prescrire une PPC dès un IAH ≥ 15/h en cas de comorbidité cardiovasculaire associée « n'est peut-être plus justifiée » avec les données récentes. « Ça va devoir changer un peu nos pratiques », notamment les filières de soins avec les cardiologues.</p>
+  </div>
+</section>
+
+<!-- ======================= PARTIE 9 ======================= -->
+<section class="part">
+  <h2>11. Partie 9 – Dépistage des AROS dans les situations à risque</h2>
+  <p>Pour chaque situation, les données retenues par le groupe puis la proposition. Sauf mention contraire, « enregistrement du sommeil » désigne la PV ou la PSG à visée diagnostique.</p>
+
+  <h3>11.1 Obésité</h3>
+  <ul>
+    <li>L'obésité est le <b>facteur de risque principal</b> du SAHOS ; la prévalence des troubles respiratoires du sommeil et du SAHOS augmente avec sa sévérité.</li>
+    <li>Les patients obèses sont le plus souvent <b>symptomatiques</b> : l'IMC est très fortement associé à la somnolence, indépendamment de l'IAH.</li>
+    <li>Absence de données montrant un impact différent des AROS, ou de la PPC, sur le pronostic selon l'IMC.</li>
+    <li>Pronostic plus sombre en cas d'<b>hypoventilation alvéolaire</b> (syndrome obésité-hypoventilation).</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <ul>
+      <li>Il n'est <b>pas recommandé</b> de réaliser un enregistrement du sommeil chez les patients en situation d'obésité sans signes cliniquement significatifs de SAHOS.</li>
+      <li>Il est <b>recommandé</b> de réaliser un enregistrement du sommeil en cas d'hypoventilation alvéolaire diurne documentée (PaCO<sub>2</sub> &gt; 45 mmHg) pour guider le choix thérapeutique (PPC ou VNI).</li>
+    </ul>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>« Presque un faux problème » : interrogés, ces patients sont presque toujours symptomatiques, sauf peut-être en cas d'obésité gynoïde, qui retentit moins sur les VAS. Dans le SOH, la PPC est une option s'il existe des apnées en quantité significative, la VNI sinon : l'enregistrement sert à choisir.</p>
+  </div>
+
+  <h3>11.2 Hypertension artérielle</h3>
+  <ul>
+    <li>Impact des AROS sur le pronostic des hypertendus : données limitées (impact sur l'HTA incidente controversé).</li>
+    <li>Impact de la PPC sur les chiffres tensionnels (nombreux essais randomisés et méta-analyses) : <b>faible à modéré</b> (2 à 3 mmHg) chez les hypertendus, <b>nul</b> si l'HTA est contrôlée par les médicaments ; <b>plus important</b> en cas d'HTA <b>résistante</b> et chez les <b>« non-dippers »</b>.</li>
+    <li>Impact de la PPC sur le pronostic (morbi-mortalité) des hypertendus : non étudié, contrairement aux antihypertenseurs.</li>
+  </ul>
+  <div class="def"><div class="lbl">Définition</div><p><b>Non-dipper</b> : absence de la baisse physiologique nocturne de la pression artérielle (voire élévation nocturne, « riser »). <b>HTA résistante</b> : HTA non contrôlée malgré plusieurs traitements associés.</p></div>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <ul>
+      <li>Il est proposé de <b>ne pas réaliser</b> d'enregistrement du sommeil chez les patients hypertendus contrôlés, non résistants, sans signes cliniquement significatifs de SAHOS (classe IIa, niveau d'évidence B).</li>
+      <li>Il est proposé de <b>réaliser</b> un enregistrement du sommeil chez les patients présentant une <b>HTA résistante, mal contrôlée ou de profil « non-dipper »</b>, même en l'absence de signes cliniquement significatifs de SAHOS.</li>
+    </ul>
+  </div>
+
+  <h3>11.3 Diabète de type 2</h3>
+  <ul>
+    <li>Impact des AROS sur le pronostic des diabétiques : données limitées.</li>
+    <li>PPC : <b>absence d'impact sur le contrôle glycémique</b> ; impact sur le pronostic : données limitées.</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div><p>Il n'est <b>pas recommandé</b> de réaliser un enregistrement du sommeil chez les patients diabétiques de type 2 sans signes cliniquement significatifs de SAHOS.</p></div>
+
+  <h3>11.4 Pathologie coronarienne</h3>
+  <ul>
+    <li>Pas d'impact des AROS sur le pronostic des patients post-infarctus.</li>
+    <li>Absence d'impact de la PPC sur le pronostic en post-événement coronarien (trois essais randomisés et leur méta-analyse, tous négatifs).</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div><p>Il n'est <b>pas recommandé</b> de réaliser un enregistrement du sommeil chez les patients ayant présenté une coronaropathie sans signe cliniquement significatif de SAHOS.</p></div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div><p>Cette position « va nécessiter de revoir un peu les filières de soins, notamment avec nos collègues cardiologues ».</p></div>
+
+  <h3>11.5 Insuffisance cardiaque</h3>
+  <ul>
+    <li>Association entre AROS et pronostic des insuffisants cardiaques.</li>
+    <li>Impact de la PPC sur le pronostic : données très limitées (hors ventilation auto-asservie, ASV) mais globalement négatives.</li>
+    <li>Impact possible de la PPC/ASV sur les <b>symptômes</b> de l'insuffisance cardiaque (à confirmer).</li>
+  </ul>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div><p>Le seul essai randomisé prospectif cité, ADVENT-HF, incluait des insuffisants cardiaques avec apnées obstructives et centrales traités par ventilation auto-asservie : impact symptomatique, mais absence d'impact pronostique.</p></div>
+  <div class="reco"><div class="lbl">Recommandation proposée</div><p>Il n'est <b>pas recommandé</b> de réaliser un enregistrement du sommeil chez les patients présentant une insuffisance cardiaque sans signe cliniquement significatif de SAHOS.</p></div>
+
+  <h3>11.6 Pathologie vasculaire cérébrale</h3>
+  <ul>
+    <li>Association AROS – risque de récidive d'événements cardiovasculaires après AVC : négative (discutée).</li>
+    <li>Association AROS – pronostic neurologique après AVC : négative (discutée).</li>
+    <li>Impact de la PPC sur la récidive cardiovasculaire et sur le pronostic neurologique : négatif (discuté) ; les essais randomisés s'opposent aux données observationnelles.</li>
+    <li>Plusieurs essais en cours.</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div><p>Il n'est <b>pas recommandé</b> de réaliser un enregistrement du sommeil chez les patients ayant présenté un AVC sans signe cliniquement significatif de SAHOS.</p></div>
+
+  <h3>11.7 Troubles du rythme auriculaire (fibrillation atriale, FA)</h3>
+  <ul>
+    <li>Association AROS – incidence et récidive des troubles du rythme : discutée ; les études épidémiologiques récentes ne retrouvent pas de sur-risque incident de FA.</li>
+    <li>Association AROS – pronostic des patients en FA : négative (discutée).</li>
+    <li><b>Absence d'impact de la PPC</b> (trois essais randomisés négatifs ; un quatrième essai français en cours) sur : la récidive après ablation de FA (choc, isolation des veines pulmonaires) ; le temps passé en FA chez les patients en FA paroxystique ; le risque de FA post-opératoire.</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div><p>Il n'est <b>pas recommandé</b> de réaliser un enregistrement du sommeil chez les patients présentant un premier épisode documenté de FA ou une FA récidivante sans signes cliniquement significatifs de SAHOS.</p></div>
+
+  <h3>11.8 BPCO</h3>
+  <ul>
+    <li>Pas d'association épidémiologique forte : co-incidence de deux pathologies fréquentes en pneumologie.</li>
+    <li>Association entre AROS et pronostic des patients BPCO.</li>
+    <li>Impact de la PPC : uniquement des études observationnelles (potentiellement biaisées), résultats controversés ; pas d'essai randomisé. L'orateur compare la situation à celle du cardiovasculaire en 2010.</li>
+    <li>STOP-Bang : questionnaire le mieux validé dans cette population.</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <ul>
+      <li>Il est proposé de <b>ne pas réaliser</b> d'enregistrement du sommeil chez les patients BPCO sans signes cliniquement significatifs de SAHOS (classe IIa, niveau d'évidence B).</li>
+      <li>Il est proposé de <b>rechercher les signes cliniques évocateurs</b>, en s'aidant éventuellement d'un questionnaire <b>STOP-Bang</b> ; s'ils sont présents ou si le STOP-Bang est positif, aller plus loin (enregistrement, et le cas échéant PPC).</li>
+    </ul>
+  </div>
+
+  <h3>11.9 Période périopératoire</h3>
+  <ul>
+    <li>Association AROS – risque périopératoire : controversée (problèmes d'ajustement, cohortes de faible taille).</li>
+    <li>Impact de la PPC non démontré ; les essais de PPC instaurée juste avant la chirurgie se heurtent à une <b>observance très faible</b> (patients peu symptomatiques, peu de temps pour s'habituer).</li>
+    <li>STOP-Bang : questionnaire le mieux validé.</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <ul>
+      <li>Il est recommandé de <b>ne pas réaliser systématiquement</b> d'enregistrement du sommeil en préopératoire en l'absence de signes cliniquement significatifs de SAHOS.</li>
+      <li>Il est proposé de réaliser un <b>dépistage des AROS par le questionnaire STOP-Bang</b>.</li>
+      <li>Il est proposé d'évaluer l'intérêt d'un enregistrement diagnostique en fonction de l'importance de la suspicion clinique, des comorbidités, du type de chirurgie et d'anesthésie envisagés.</li>
+    </ul>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div><p>Le choix d'aller plus loin est laissé à l'<b>anesthésiste</b>, qui seul peut intégrer le type de chirurgie et d'anesthésie, éléments que le somnologue ne maîtrise pas.</p></div>
+
+  <h3>11.10 Grossesse</h3>
+  <ul>
+    <li>La prévalence des AROS augmente pendant la grossesse, au fil des trimestres.</li>
+    <li>Association entre AROS et complications maternelles et fœtales incidentes.</li>
+    <li>Impact de la PPC : <b>trois essais randomisés négatifs</b> ; <b>un essai positif (2024)</b> dans une population de grossesses à risque (obésité, HTA gravidique, diabète gestationnel, pré-éclampsie), avec de nombreuses limites (majorité de patientes refusant l'enregistrement ou la PPC) mais un « début de signal positif ».</li>
+  </ul>
+  <div class="reco"><div class="lbl">Recommandation proposée</div>
+    <ul>
+      <li>Il n'est <b>pas recommandé</b> de réaliser un enregistrement du sommeil chez les femmes enceintes sans signes cliniquement significatifs de SAHOS.</li>
+      <li>Il est proposé de réaliser un <b>dépistage des AROS par un questionnaire validé (STOP-Bang)</b> chez les femmes présentant un <b>IMC ≥ 30</b> au premier ou deuxième trimestre et/ou une <b>hypertension gravidique, une éclampsie ou pré-éclampsie, ou un diabète gestationnel</b> actuel ou passé.</li>
+    </ul>
+  </div>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div><p>Position « en accord avec les recommandations américaines » : pas d'enregistrement systématique, mais recherche des symptômes et, si besoin, STOP-Bang chez les femmes à risque.</p></div>
+</section>
+
+<!-- ======================= PARTIE 10 ======================= -->
+<section class="part">
+  <h2>12. Partie 10 – Synthèse : « Bien définir pour mieux traiter »</h2>
+  <div class="key"><div class="lbl">Les cinq messages de la diapositive de conclusion</div>
+    <ol>
+      <li><b>Apnées et hypopnées : définitions simplifiées</b>, pragmatiques et justifiées par la littérature ; disparition des ERIM comme catégorie séparée.</li>
+      <li><b>SAHOS ≠ IAH élevé</b> : symptômes et retentissement sont essentiels au diagnostic ; notion d'AROS pour l'IAH pathologique asymptomatique.</li>
+      <li><b>Seuil d'IAH pathologique</b> : ≥ 5/h avant 65 ans, ≥ 15/h après 65 ans.</li>
+      <li><b>Sévérité</b> : abandon des catégories léger / modéré / sévère au profit d'une évaluation multidimensionnelle.</li>
+      <li><b>Dépistage</b> : pas de dépistage systématique ; indications d'enregistrement ciblées, fondées sur le bénéfice clinique attendu.</li>
+    </ol>
+  </div>
+
+  <h3>Ce qui change concrètement dans la pratique</h3>
+  <table class="t">
+    <tr><th style="width:34%">Pratique courante issue de 2010</th><th>Proposition 2026</th></tr>
+    <tr><td>Codage d'une hypopnée sur une baisse « ≥ 30 % » du débit ; ERIM codés à part</td><td>Baisse « significative » + désaturation 3 % ou micro-éveil, ou plateau inspiratoire + micro-éveil ; 10 à 120 s</td></tr>
+    <tr><td>Diagnostic de SAHOS posé sur l'IAH, symptômes accessoires</td><td>Pas de SAHOS sans symptômes (2 des 3 catégories + retentissement) ; sinon AROS</td></tr>
+    <tr><td>IAH ≥ 5/h pathologique à tout âge adulte</td><td>≥ 5/h de 18 à 65 ans ; ≥ 15/h à partir de 65 ans</td></tr>
+    <tr><td>« SAHOS léger / modéré / sévère » selon l'IAH</td><td>Évaluation multidimensionnelle (clinique, biomarqueurs, terrain)</td></tr>
+    <tr><td>PV première intention quasi systématique</td><td>PSG d'emblée si trouble non respiratoire du sommeil associé ou risque d'hypopnées non désaturantes</td></tr>
+    <tr><td>Enregistrement fréquent chez les patients avec comorbidités CV (post-IDM, FA, AVC, IC) même asymptomatiques ; PPC si IAH ≥ 15 + comorbidité CV</td><td>Pas d'enregistrement sans signes cliniquement significatifs, sauf HTA résistante / mal contrôlée / non-dipper ; la comorbidité CV seule ne justifie plus la PPC</td></tr>
+    <tr><td>Dépistage par questionnaires chez les obèses, diabétiques, etc.</td><td>Pas de dépistage en population générale ni sur la seule base de l'obésité ou du diabète ; STOP-Bang ciblé : BPCO, préopératoire, grossesse à risque</td></tr>
+  </table>
+  <div class="oral"><div class="lbl">Commentaire de l'orateur (audio)</div>
+    <p>Le chapitre dépistage est né du constat que les pratiques installées depuis 2010 s'appuyaient sur une littérature qui semblait favorable à la PPC dans le champ cardiovasculaire ; les données récentes imposent de « revoir notre copie ». Cette mise au point sera complétée par la partie traitement et suivi.</p>
+  </div>
+</section>
+
+<!-- ======================= TABLEAU RECAP ======================= -->
+<section class="part">
+  <h2>13. Tableau récapitulatif des recommandations proposées</h2>
+  <p class="small">Formulations reformulées à partir des diapositives. « Recommandé / non recommandé » traduit un niveau de certitude plus élevé que « proposé ». Recommandations en cours, non définitives.</p>
+  <table class="t">
+    <tr><th style="width:22%">Thème</th><th>Proposition</th></tr>
+    <tr><td>Apnée</td><td>Arrêt du débit aérien naso-buccal ≥ 10 s.</td></tr>
+    <tr><td>Hypopnée</td><td>Diminution significative du débit + désaturation 3 % ou micro-éveil, ou plateau inspiratoire + micro-éveil ; 10–120 s. En PV, seules les hypopnées désaturantes comptent.</td></tr>
+    <tr><td>Diagnostic</td><td>Pas de SAHOS sans symptômes. IAH pathologique sans symptôme = AROS ; AROS + comorbidité à causalité établie = AROS à haut risque.</td></tr>
+    <tr><td>IAH pathologique</td><td>≥ 5/h de 18 à 65 ans ; ≥ 15/h à partir de 65 ans.</td></tr>
+    <tr><td>Sévérité</td><td>Abandon de léger / modéré / sévère ; évaluation multidimensionnelle du retentissement.</td></tr>
+    <tr><td>Examen</td><td>PSG d'emblée si trouble non respiratoire du sommeil associé (insomnie, SJSR, MPJ, ISRS) ou risque d'hypopnées non désaturantes (jeune, sans surpoids) ; PV d'emblée sinon.</td></tr>
+    <tr><td>Population générale</td><td>Pas de dépistage (ni questionnaires, ni examens).</td></tr>
+    <tr><td>Obésité</td><td>Pas d'enregistrement sans signes significatifs ; enregistrement recommandé si PaCO<sub>2</sub> &gt; 45 mmHg (choix PPC/VNI).</td></tr>
+    <tr><td>HTA</td><td>Pas d'enregistrement si HTA contrôlée non résistante sans signes (IIa, B) ; enregistrement si HTA résistante, mal contrôlée ou non-dipper, même sans symptôme.</td></tr>
+    <tr><td>Diabète de type 2</td><td>Pas d'enregistrement sans signes significatifs.</td></tr>
+    <tr><td>Coronaropathie</td><td>Pas d'enregistrement sans signes significatifs.</td></tr>
+    <tr><td>Insuffisance cardiaque</td><td>Pas d'enregistrement sans signes significatifs.</td></tr>
+    <tr><td>AVC</td><td>Pas d'enregistrement sans signes significatifs.</td></tr>
+    <tr><td>Fibrillation atriale</td><td>Pas d'enregistrement (premier épisode ou FA récidivante) sans signes significatifs.</td></tr>
+    <tr><td>BPCO</td><td>Pas d'enregistrement systématique (IIa, B) ; rechercher les signes cliniques, STOP-Bang en aide.</td></tr>
+    <tr><td>Préopératoire</td><td>Pas d'enregistrement systématique ; STOP-Bang ; décision d'enregistrement selon suspicion, comorbidités, chirurgie et anesthésie.</td></tr>
+    <tr><td>Grossesse</td><td>Pas d'enregistrement sans signes significatifs ; STOP-Bang si IMC ≥ 30 (T1–T2) et/ou HTA gravidique, (pré)éclampsie, diabète gestationnel actuel ou passé.</td></tr>
+  </table>
+</section>
+
+<!-- ======================= AUTO-EVALUATION ======================= -->
+<section class="part">
+  <h2>14. Auto-évaluation</h2>
+  <h3>14.1 Questions à choix multiples (une ou plusieurs réponses exactes)</h3>
+
+  <div class="qcm"><div class="q">1. Concernant la définition de l'apnée proposée en 2026 :</div><ol><li>Elle reprend la définition AASM d'une baisse de plus de 90 % du débit</li><li>Elle correspond à un arrêt du débit aérien naso-buccal d'au moins 10 secondes</li><li>Elle est fondée sur un codage par thermistance</li><li>Elle correspond à la définition des RPC 2010</li></ol></div>
+  <div class="qcm"><div class="q">2. Dans la nouvelle définition de l'hypopnée :</div><ol><li>Le seuil de baisse du débit de 30 % est maintenu</li><li>Un plateau inspiratoire suivi d'un micro-éveil est une hypopnée</li><li>La durée est comprise entre 10 et 120 secondes</li><li>En polygraphie ventilatoire, les hypopnées éveillantes doivent être comptées</li></ol></div>
+  <div class="qcm"><div class="q">3. Les symptômes de catégorie 2 (altération du sommeil) comprennent :</div><ol><li>Ronflements</li><li>Somnolence diurne excessive</li><li>Nycturie</li><li>Insomnie</li></ol></div>
+  <div class="qcm"><div class="q">4. Le diagnostic de SAHOS requiert :</div><ol><li>Un IAH pathologique seul</li><li>Des symptômes d'au moins 2 des 3 premières catégories</li><li>Un retentissement cliniquement significatif</li><li>L'exclusion d'autres causes expliquant mieux les symptômes</li></ol></div>
+  <div class="qcm"><div class="q">5. Le terme AROS désigne :</div><ol><li>La traduction française du terme anglais OSAS</li><li>Un IAH pathologique sans symptôme</li><li>Un SAHOS avec comorbidité cardiovasculaire</li><li>La traduction française du terme anglais OSA</li></ol></div>
+  <div class="qcm"><div name="q6" class="q">6. Un homme de 72 ans asymptomatique a un IAH à 11/h en polygraphie. Selon les propositions 2026 :</div><ol><li>Il a un SAHOS léger</li><li>Il a des AROS</li><li>Son IAH n'est pas pathologique</li><li>Une PPC est indiquée au titre de la prévention cardiovasculaire</li></ol></div>
+  <div class="qcm"><div class="q">7. À propos de la sévérité du SAHOS :</div><ol><li>L'IAH prédit l'amélioration de la somnolence sous PPC</li><li>La classification léger / modéré / sévère fondée sur l'IAH est abandonnée</li><li>L'évaluation doit être multidimensionnelle</li><li>Un IAH ≥ 30/h définit un SAHOS sévère</li></ol></div>
+  <div class="qcm"><div class="q">8. Une PSG d'emblée est recommandée :</div><ol><li>Chez tout patient obèse</li><li>En cas d'insomnie associée</li><li>Chez un sujet jeune sans surpoids</li><li>En cas de suspicion de mouvements périodiques des jambes sous ISRS</li></ol></div>
+  <div class="qcm"><div class="q">9. Les questionnaires STOP-Bang, Berlin et NoSAS :</div><ol><li>Sont validés pour détecter un SAHOS</li><li>Sont validés pour identifier les sujets à risque d'IAH élevé</li><li>Sont recommandés pour le dépistage en population générale</li><li>Tiennent peu compte du retentissement des symptômes</li></ol></div>
+  <div class="qcm"><div class="q">10. Dans la cohorte HypnoLaus (sujets de plus de 40 ans), la proportion d'hommes avec un IAH ≥ 15/h est d'environ :</div><ol><li>10 %</li><li>25 %</li><li>50 %</li><li>84 %</li></ol></div>
+  <div class="qcm"><div class="q">11. Le « healthy adherer effect » :</div><ol><li>Est un effet pharmacologique du placebo</li><li>Explique une partie du meilleur pronostic observé chez les patients observants à la PPC dans les études observationnelles</li><li>Est de l'ordre de 30 à 40 % de réduction du risque dans les méta-analyses cardiovasculaires</li><li>A été démontré dans le groupe placebo d'un essai randomisé chez plus de 13 000 femmes</li></ol></div>
+  <div class="qcm"><div class="q">12. Concernant le PWAD :</div><ol><li>Il se mesure sur le signal de pression nasale</li><li>Un index bas traduit une perte de réactivité vasculaire</li><li>Chez les patients OSA+ à PWAD bas, le risque cardiovasculaire est plus élevé</li><li>Le bénéfice de la PPC semble s'observer chez les patients à PWAD élevé</li></ol></div>
+  <div class="qcm"><div class="q">13. Situations où un enregistrement du sommeil est proposé malgré l'absence de symptômes :</div><ol><li>Diabète de type 2 équilibré</li><li>HTA résistante</li><li>Profil tensionnel non-dipper</li><li>Post-infarctus récent</li></ol></div>
+  <div class="qcm"><div class="q">14. Chez une femme enceinte avec IMC à 33 au premier trimestre, sans symptôme :</div><ol><li>Une polygraphie systématique est recommandée</li><li>Un dépistage par STOP-Bang est proposé</li><li>Trois essais randomisés de PPC pendant la grossesse sont négatifs</li><li>Aucune évaluation n'est proposée</li></ol></div>
+  <div class="qcm"><div class="q">15. Après ajustement sur les facteurs de risque cardiovasculaire classiques, l'IAH :</div><ol><li>Reste un facteur pronostique indépendant d'événements cardiovasculaires</li><li>N'est plus associé au pronostic dans la cohorte de Kendzerska 2014</li><li>Prédit la réponse à la PPC</li><li>N'est associé au pronostic dans aucune des trois études récentes citées (Pays de la Loire, HypnoLaus, SHHS)</li></ol></div>
+
+  <h3>14.2 Corrigé commenté</h3>
+  <div class="corr"><b>1 – B, D.</b> La définition AASM (baisse &gt; 90 %) est écartée car fondée sur la thermistance ; retour à la définition de 2010.</div>
+  <div class="corr"><b>2 – B, C.</b> Le seuil de 30 % est remplacé par « diminution significative » ; les ERIM deviennent des hypopnées. En PV, seules les hypopnées désaturantes sont comptabilisées faute d'EEG.</div>
+  <div class="corr"><b>3 – B, D.</b> Les ronflements relèvent de la catégorie 1, la nycturie de la catégorie 3.</div>
+  <div class="corr"><b>4 – B, C, D.</b> Critères A (IAH) + B (symptômes de 2 catégories sur 3, non mieux expliqués) + C (retentissement). L'IAH seul ne suffit jamais.</div>
+  <div class="corr"><b>5 – B, D.</b> AROS = OSA (IAH pathologique isolé) ; SAHOS = OSAS. L'AROS avec comorbidité spécifique est un « AROS à haut risque ».</div>
+  <div class="corr"><b>6 – C.</b> À partir de 65 ans, le seuil pathologique est 15/h ; un IAH de 11/h n'est donc pas pathologique. Même au-delà de 15/h, sans symptôme il s'agirait d'AROS, et la comorbidité cardiovasculaire ne justifie plus à elle seule une PPC.</div>
+  <div class="corr"><b>7 – B, C.</b> L'IAH ne prédit ni les symptômes, ni le pronostic, ni la réponse à la PPC (données Pays de la Loire, ERS 2026).</div>
+  <div class="corr"><b>8 – B, C, D.</b> PSG d'emblée si trouble non respiratoire du sommeil associé ou risque d'hypopnées non désaturantes. L'obésité n'est pas en soi une indication de PSG.</div>
+  <div class="corr"><b>9 – B, D.</b> Validés pour l'IAH élevé (AROS), non pour le SAHOS ; pas de dépistage en population générale.</div>
+  <div class="corr"><b>10 – C.</b> 49,7 % des hommes et 23,4 % des femmes ; pour un IAH ≥ 5/h : 83,8 % et 60,8 %.</div>
+  <div class="corr"><b>11 – B, C, D.</b> Il ne s'agit pas d'un effet pharmacologique mais d'un comportement global favorable à la santé (Curtis 2011, WHI ; Simpson 2006 ; Launois 2024 ; Lettieri 2024).</div>
+  <div class="corr"><b>12 – B, C, D.</b> Le PWAD se mesure sur la photopléthysmographie de l'oxymètre. Bénéfice de la PPC uniquement si PWAD élevé (HR 0,74) ; aucun si PWAD bas (HR 0,91).</div>
+  <div class="corr"><b>13 – B, C.</b> Seules l'HTA résistante, mal contrôlée ou non-dipper justifient un enregistrement sans symptôme. Diabète et coronaropathie : non.</div>
+  <div class="corr"><b>14 – B, C.</b> Pas d'enregistrement systématique ; STOP-Bang proposé si IMC ≥ 30 aux T1–T2 ou HTA gravidique, (pré)éclampsie, diabète gestationnel. Trois essais randomisés négatifs, un essai positif en population à risque.</div>
+  <div class="corr"><b>15 – B, D.</b> C'est le cœur de l'argumentaire : l'IAH n'est pas un biomarqueur pronostique indépendant.</div>
+
+  <h3>14.3 Cas cliniques</h3>
+  <div class="qcm"><div class="q">Cas 1.</div><p>Homme de 58 ans, IMC 29, adressé par son cardiologue après un infarctus il y a 3 mois « pour dépistage d'apnées ». Il ne ronfle pas de façon gênante, dort bien, Epworth 5, pas de nycturie ni céphalées. Que proposez-vous ?</p></div>
+  <div class="corr"><b>Réponse.</b> Pas de signe cliniquement significatif de SAHOS (aucune catégorie 1 à 3 retentissante). En post-événement coronarien, les essais randomisés et leur méta-analyse ne montrent aucun impact de la PPC sur le pronostic ; il n'est pas recommandé de réaliser un enregistrement du sommeil. Il convient d'expliquer au cardiologue l'évolution des données (prévention secondaire : signaux négatifs) et de réévaluer si des symptômes apparaissent.</div>
+  <div class="qcm"><div class="q">Cas 2.</div><p>Femme de 49 ans, IMC 31, HTA traitée par trois antihypertenseurs dont un diurétique, PA à 152/94 mmHg au cabinet, MAPA : absence de baisse nocturne. Elle décrit un sommeil « correct », pas de somnolence. Que proposez-vous ?</p></div>
+  <div class="corr"><b>Réponse.</b> HTA résistante et profil non-dipper : c'est la situation retenue au critère D. Il est proposé de réaliser un enregistrement du sommeil même sans signe cliniquement significatif de SAHOS. Un IAH pathologique (≥ 5/h avant 65 ans) définirait un AROS à haut risque, situation où l'effet de la PPC sur la pression artérielle est le plus important.</div>
+  <div class="qcm"><div class="q">Cas 3.</div><p>Femme de 32 ans, IMC 22, consulte pour fatigue au réveil, sommeil non réparateur et céphalées matinales ; son conjoint rapporte des ronflements. Elle prend un ISRS pour un trouble anxieux. Quel examen et pourquoi ?</p></div>
+  <div class="corr"><b>Réponse.</b> Symptômes des catégories 1 (ronflements), 2 (sommeil non réparateur) et 3 (céphalées matinales) : suspicion clinique de SAHOS. Profil à risque d'hypopnées non désaturantes (jeune, sans surpoids, femme) et traitement par ISRS exposant aux mouvements périodiques des jambes : une PSG d'emblée est recommandée, la PV risquant de sous-estimer l'IAH (hypopnées éveillantes non codables) et de méconnaître un diagnostic différentiel.</div>
+</section>
+
+<!-- ======================= GLOSSAIRE ======================= -->
+<section class="part">
+  <h2>15. Glossaire</h2>
+  <table class="t">
+    <tr><th style="width:20%">Terme</th><th>Définition</th></tr>
+    <tr><td>AASM</td><td>American Academy of Sleep Medicine ; ses règles de codage (2012) servent de référence internationale.</td></tr>
+    <tr><td>AROS</td><td>Anomalies respiratoires obstructives du sommeil : IAH pathologique sans symptôme (équivalent de l'anglais OSA).</td></tr>
+    <tr><td>AROS à haut risque</td><td>AROS associé à une comorbidité où la causalité et le bénéfice de la PPC sont les mieux établis (critère D), par exemple HTA résistante ou non-dipper.</td></tr>
+    <tr><td>ASV</td><td>Ventilation auto-asservie (adaptive servo-ventilation), utilisée dans les apnées centrales de l'insuffisance cardiaque.</td></tr>
+    <tr><td>ERIM</td><td>Événement respiratoire inducteur de micro-éveil (RPC 2010) : plateau inspiratoire suivi d'un micro-éveil ; intégré désormais à la définition de l'hypopnée.</td></tr>
+    <tr><td>Healthy adherer effect</td><td>Meilleur pronostic des patients observants à un traitement, lié à un comportement global favorable à la santé et non au traitement lui-même.</td></tr>
+    <tr><td>HypnoLaus</td><td>Cohorte épidémiologique de Lausanne avec PSG systématique en population générale.</td></tr>
+    <tr><td>IAH</td><td>Index d'apnées-hypopnées : nombre d'événements par heure de sommeil (PSG) ou d'enregistrement (PV).</td></tr>
+    <tr><td>MACE / MACCE</td><td>Événements cardiovasculaires (et cérébrovasculaires) majeurs : infarctus, AVC, insuffisance cardiaque, revascularisation, décès.</td></tr>
+    <tr><td>Non-dipper</td><td>Absence de baisse nocturne physiologique de la pression artérielle.</td></tr>
+    <tr><td>PPC</td><td>Pression positive continue (CPAP).</td></tr>
+    <tr><td>PSG</td><td>Polysomnographie : enregistrement avec EEG permettant de coder le sommeil et les micro-éveils.</td></tr>
+    <tr><td>PV</td><td>Polygraphie ventilatoire : enregistrement respiratoire sans EEG ; ne détecte pas les micro-éveils.</td></tr>
+    <tr><td>PWAD</td><td>Pulse Wave Amplitude Drops : chutes d'amplitude de l'onde de pouls (photopléthysmographie), marqueur de réactivité vasculaire.</td></tr>
+    <tr><td>RPC 2010</td><td>Recommandations pour la pratique clinique françaises de 2010 sur le SAHOS de l'adulte.</td></tr>
+    <tr><td>SAHCS 2024</td><td>Consensus 2024 sur les règles de codage, reprenant les définitions de l'AASM.</td></tr>
+    <tr><td>SAHOS / SAOS</td><td>Syndrome d'apnées-hypopnées obstructives du sommeil (équivalent de l'anglais OSAS) : IAH pathologique + symptômes + retentissement.</td></tr>
+    <tr><td>SFRMS</td><td>Société Française de Recherche et Médecine du Sommeil.</td></tr>
+    <tr><td>SHHS</td><td>Sleep Heart Health Study, cohorte américaine de référence.</td></tr>
+    <tr><td>SOH</td><td>Syndrome obésité-hypoventilation (PaCO<sub>2</sub> diurne &gt; 45 mmHg chez un sujet obèse).</td></tr>
+    <tr><td>SPLF</td><td>Société de Pneumologie de Langue Française.</td></tr>
+    <tr><td>STOP-Bang</td><td>Questionnaire de dépistage en 8 items (Snoring, Tired, Observed, Pressure, BMI, Age, Neck, Gender).</td></tr>
+    <tr><td>VAS</td><td>Voies aériennes supérieures.</td></tr>
+    <tr><td>VNI</td><td>Ventilation non invasive.</td></tr>
+  </table>
+</section>
+
+<!-- ======================= REFERENCES ======================= -->
+<section class="part">
+  <h2>16. Références citées dans la présentation</h2>
+  <p class="small">Telles qu'affichées sur les diapositives ou citées oralement ; l'année indiquée est celle mentionnée par l'orateur ou la diapositive.</p>
+  <ol>
+    <li>Young T, et al. Sleep Heart Health Study. Arch Intern Med 2002 (prévalence de l'IAH ≥ 15 selon l'âge).</li>
+    <li>Boulos MI, et al. Paramètres polysomnographiques normaux chez l'adulte sain : revue systématique et méta-analyse. Lancet Respiratory Medicine 2019.</li>
+    <li>Heinzer R, et al. Prévalence des troubles respiratoires du sommeil en population générale, cohorte HypnoLaus. Lancet Respiratory Medicine 2015.</li>
+    <li>Redline S, et al. SAOS et AVC incident, SHHS. AJRCCM 2010.</li>
+    <li>Gottlieb DJ, et al. SAOS, coronaropathie et insuffisance cardiaque incidentes, SHHS. Circulation 2010.</li>
+    <li>Kendzerska T, et al. SAOS et événements cardiovasculaires, cohorte clinique canadienne. PLoS Medicine 2014.</li>
+    <li>Trzepizur W, et al. Charge hypoxique et événements cardiovasculaires, cohorte des Pays de la Loire. AJRCCM 2022.</li>
+    <li>Solelhac G, et al. PWAD, pronostic cardiovasculaire et bénéfice de la PPC (HypnoLaus, Pays de la Loire). AJRCCM 2023.</li>
+    <li>Lechat B, et al. Insomnie, SAOS, COMISA et risque cardiovasculaire, SHHS. Journal of Sleep Research 2022.</li>
+    <li>Sánchez-de-la-Torre M, et al. Adhésion à la PPC et risque d'événements cardiovasculaires récurrents : méta-analyse sur données individuelles. JAMA (citée 2024 sur la diapositive).</li>
+    <li>Pépin JL, et al. Observance de la PPC et survie, données françaises. CHEST 2023.</li>
+    <li>Marin JM, et al. Pronostic cardiovasculaire selon la sévérité du SAOS et le traitement par PPC. Lancet 2005.</li>
+    <li>Simpson SH, et al. Méta-analyse de l'association entre adhésion au traitement et mortalité. BMJ 2006.</li>
+    <li>Curtis JR, et al. Adhésion au placebo et événements cliniques, Women's Health Initiative. Medical Care 2011.</li>
+    <li>Launois S, et al. Observance de la PPC et observance des traitements cardiovasculaires. Thorax 2024.</li>
+    <li>Lettieri CJ, et al. Utilisation de la PPC et adhésion médicamenteuse. JCSM 2024.</li>
+    <li>Gervès-Pinquié C, et al. Observance de la PPC et MACE, cohorte IRSR Pays de la Loire (n = 5 138). AJRCCM 2022.</li>
+    <li>Trzepizur W, et al. IAH et variation du score d'Epworth sous PPC. Communication ERS 2026.</li>
+    <li>Essai ADVENT-HF (ventilation auto-asservie dans l'insuffisance cardiaque), cité oralement.</li>
+    <li>Recommandations pour la pratique clinique sur le SAHOS de l'adulte, SPLF, 2010 (Revue des Maladies Respiratoires).</li>
+  </ol>
+</section>
+
+<!-- ======================= ANNEXES ======================= -->
+<section class="part">
+  <h2>17. Annexes</h2>
+  <h3>17.1 Chronologie de la vidéo (durée 37 min 36 s)</h3>
+  <table class="t timeline">
+    <tr><th style="width:14%">Minutage</th><th>Contenu</th></tr>
+    <tr><td>00:00 – 00:55</td><td>Introduction, présentation des coordinateurs, cadre SPLF–SFRMS, conflits d'intérêts</td></tr>
+    <tr><td>00:55 – 01:40</td><td>Définition de l'apnée : RPC 2010, AASM/SAHCS 2024, retour à 2010</td></tr>
+    <tr><td>01:40 – 03:40</td><td>Hypopnée et ERIM : passé, constat, nouvelle définition, remarque sur la PV</td></tr>
+    <tr><td>03:40 – 04:40</td><td>Symptômes : les quatre catégories, retentissement, diagnostics différentiels</td></tr>
+    <tr><td>04:40 – 06:20</td><td>IAH élevé isolé, pas de SAHOS sans symptômes, création du terme AROS</td></tr>
+    <tr><td>06:20 – 07:20</td><td>Définition du SAHOS (A + B + C) et des AROS à haut risque (A + D)</td></tr>
+    <tr><td>07:20 – 08:40</td><td>IAH en population générale et chez les sujets sains ; seuils 5/h et 15/h</td></tr>
+    <tr><td>08:40 – 10:40</td><td>Sévérité : constat et abandon de léger / modéré / sévère</td></tr>
+    <tr><td>10:40 – 11:20</td><td>Quel examen : PSG d'emblée versus PV</td></tr>
+    <tr><td>11:20 – 14:10</td><td>Dépistage : définition OMS, prévalence HypnoLaus, questionnaires, population générale</td></tr>
+    <tr><td>14:10 – 15:00</td><td>Méthode d'analyse des situations à risque</td></tr>
+    <tr><td>15:00 – 17:20</td><td>Études historiques 2010, Kendzerska 2014, biais de publication</td></tr>
+    <tr><td>17:20 – 20:30</td><td>Essais randomisés versus observationnel ; healthy adherer effect</td></tr>
+    <tr><td>20:30 – 23:20</td><td>Prévention primaire versus secondaire ; PWAD</td></tr>
+    <tr><td>23:20 – 25:10</td><td>Données observationnelles (Gervès-Pinquié 2022) ; tableau de synthèse</td></tr>
+    <tr><td>25:10 – 27:10</td><td>Obésité</td></tr>
+    <tr><td>27:10 – 28:50</td><td>HTA</td></tr>
+    <tr><td>28:50 – 29:20</td><td>Diabète</td></tr>
+    <tr><td>29:20 – 29:40</td><td>Pathologie coronarienne</td></tr>
+    <tr><td>29:40 – 30:30</td><td>Insuffisance cardiaque</td></tr>
+    <tr><td>30:30 – 31:00</td><td>Pathologie vasculaire cérébrale</td></tr>
+    <tr><td>31:00 – 31:40</td><td>Troubles du rythme auriculaire</td></tr>
+    <tr><td>31:40 – 32:40</td><td>BPCO</td></tr>
+    <tr><td>32:40 – 34:00</td><td>Préopératoire</td></tr>
+    <tr><td>34:00 – 35:30</td><td>Grossesse</td></tr>
+    <tr><td>35:30 – 37:36</td><td>Conclusion « Bien définir pour mieux traiter », suites annoncées, remerciements</td></tr>
+  </table>
+
+  <h3>17.2 Contenu du podcast « Quoi de neuf Docteur ? » (1 min 02 s)</h3>
+  <p>Dans ce court épisode, le Pr Trzepizur rappelle que les dernières recommandations datent de 2010 et qu'une équipe entière a retravaillé le sujet. Il met en avant trois propositions : la redéfinition des hypopnées ; la révision de l'évaluation de la sévérité avec l'abandon de la classification léger / modéré / sévère fondée sur l'IAH ; et le recentrage sur les symptômes, « mot-clé de ces recommandations », pour évaluer la sévérité et identifier les patients à qui proposer un traitement spécifique.</p>
+
+  <h3>17.3 Suites annoncées</h3>
+  <ul>
+    <li><b>Congrès du Sommeil</b>, Lyon, 25–27 novembre 2026 : présentation des nouvelles recommandations sur le diagnostic, la prise en charge et le suivi des patients adultes présentant un SAHOS (vendredi 27 novembre, amphithéâtre, 11 h 50 – 13 h 30, session Consensus).</li>
+    <li><b>31<sup>e</sup> CPLF</b>, « Le sommeil dans tous ses états », Marseille, Parc Chanot, 29–31 janvier 2027 : session RD02 « Recommandations 1. SAHOS », vendredi 29 janvier, 14 h 30 – 16 h 00, auditorium.</li>
+    <li>Un prochain Jeudi de la SPLF consacré au <b>traitement et au suivi</b> des patients avec SAHOS (deuxième partie).</li>
+  </ul>
+
+  <h3>17.4 Méthode d'élaboration de ce document</h3>
+  <p class="small">Vidéo téléchargée depuis la page de la SPLF, extraction de 81 vues distinctes des diapositives, transcription automatique de la bande-son (vidéo et podcast) puis relecture et reformulation. Les citations d'études et les chiffres proviennent des diapositives ; les commentaires oraux sont reformulés et signalés comme tels. Toute erreur de transcription ou d'interprétation est imputable au rédacteur de cette synthèse et non aux intervenants.</p>
+  <div class="footnote">Source : Société de Pneumologie de Langue Française, « Mise à jour des recommandations sur la prise en charge du SAOS : Bien définir pour bien traiter », Jeudi de la SPLF, 5 novembre 2026, Pr W. Trzepizur et Dr S. Launois (GT Sommeil). Document pédagogique à usage de formation, sans valeur de recommandation officielle.</div>
+</section>
+
+</body>
+</html>
